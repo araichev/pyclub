@@ -6,21 +6,27 @@ This is a repository of supporting material for PyClub, a work-time meetup about
 Introduction
 =============
 - Motivation: Upskill on Python for data science. Python is useful, data science is useful, and the two together are a powerful combination.
+
 - Focus: Tools and processes for analyzing transit and geospatial data, because that's our main work at MRCagney
+
 - Assumption: You have Python proficiency at the level of, say, the `Codeacademy Python2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python3, but they're not too different.
+
 - Third-party Python libraries that we will use a lot:
-    * NumPy for numerical computing
-    * Pandas for tabular data
-    * Shapely and Fiona for geospatial data
-    * Geopandas, which combines Shapely with Pandas
-    * GTFSTK for GTFS feeds
+
+  * NumPy for numerical computing
+  * Pandas for tabular data
+  * Shapely and Fiona for geospatial data
+  * Geopandas, which combines Shapely with Pandas
+  * GTFSTK for GTFS feeds
+
 - Other notable third-party Python libraries for data science:
-    * SciPy for scientific/engineering computing
-    * Matplotlib and Seaborn for plotting and (static) visualization.
-    * Statsmodels for statistical modeling
-    * Scikit-Learn for machine learning
-    * Requests for API calls
-    * Scrapy for web crawling and scraping
+  
+  * SciPy for scientific/engineering computing
+  * Matplotlib and Seaborn for plotting and (static) visualization.
+  * Statsmodels for statistical modeling
+  * Scikit-Learn for machine learning
+  * Requests for API calls
+  * Scrapy for web crawling and scraping
 
 
 
@@ -45,15 +51,15 @@ Due: 2016-11-15
 
   .. code-block:: python
 
-    def read_gtfs(path):
-        """
-        Given a path (string or pathlib object) to a (zipped) GTFS feed, 
-        unzip the feed and save the files to a dictionary whose keys are 
-        named after GTFS tables ('stops', 'routes', etc.) and whose
-        corresponding values are Pandas data frames representing the tables.
-        Return the resulting dictionary. 
-        """
-        pass
+      def read_gtfs(path):
+          """
+          Given a path (string or pathlib object) to a (zipped) GTFS feed, 
+          unzip the feed and save the files to a dictionary whose keys are 
+          named after GTFS tables ('stops', 'routes', etc.) and whose
+          corresponding values are Pandas data frames representing the tables.
+          Return the resulting dictionary. 
+          """
+          pass
 
   Hint: Use Pandas's ``read_csv`` function.
 
