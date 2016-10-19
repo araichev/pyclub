@@ -47,7 +47,10 @@ Due: 2016-11-15
 
     def read_gtfs(path):
         """
-        Given a path (string or pathlib object) to a (zipped) GTFS feed, unzip the feed and save the files to a dictionary whose keys are named after GTFS tables ('stops', 'routes', etc.) and whose corresponding values are Pandas data frames representing the tables.
+        Given a path (string or pathlib object) to a (zipped) GTFS feed, 
+        unzip the feed and save the files to a dictionary whose keys are 
+        named after GTFS tables ('stops', 'routes', etc.) and whose
+        corresponding values are Pandas data frames representing the tables.
         Return the resulting dictionary. 
         """
         pass
