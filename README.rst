@@ -9,7 +9,7 @@ Introduction
 
 - Focus: Tools and processes for analyzing transit and geospatial data, because that's our main work at MRCagney
 
-- Assumption: You have Python proficiency at the level of, say, the `Codeacademy Python2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python3, but they're not too different.
+- Assumption: You have Python proficiency at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they're not too different.
 
 - Third-party Python libraries that we will use a lot:
 
@@ -37,9 +37,25 @@ Due: 2016-11-01
 
 1. On your computer, install Python 3.5, a virtual environment manager, and a Python package manager. You can do all this at once in a straightforward and cross-platform way by installing `Anaconda <https://www.continuum.io/downloads#windows>`_. Here is some `Reddit cheer for Anaconda <https://www.reddit.com/r/Python/comments/3t23vv/what_advantages_are_there_of_using_anaconda/>`_.  Alternatively on OS X, you can use Homebrew to install Python 3.5, virtualenv, virtualenvwrapper, and pip. Alternatively on Linux, you can use apt to install these.
 
+  Update: I hear that using the current Anaconda for Windows and Python 3.4 one can install more of the third-party libraries above than Anaconda for Windows and Python 3.5. In that case, use Python 3.4. It will do for our purposes.
+
 2. Create a directory and virtual environment for your PyClub work. In the virtual environment install the `Jupyter Notebook <https://jupyter.org/>`_. Open a Jupyter notebook.
 
-3. In a Jupyter notebook, write some Python code to solve the following problem, which i took from the *Think Python* book by Allen B. Downey. "Give me a word with three consecutive double letters. I’ll give you a couple of words that almost qualify, but don’t. For example, the word committee, c-o-m-m-i-t-t-e-e. It would be great except for the ‘i’ that sneaks in there. Or Mississippi: M-i-s-s-i-s-s-i-p-p-i. If you could take out those i’s it would work. But there is a word that has three consecutive pairs of letters and to the best of my knowledge this may be the only word. Of course there are probably 500 more but I can only think of one." Here is a `sufficient wordlist <http://greenteapress.com/thinkpython2/code/words.txt>`_.
+3. In a Jupyter notebook, write some Python code to solve the following problem, which i took from *Think Python* by Allen B. Downey. "Give me a word with three consecutive double letters. I’ll give you a couple of words that almost qualify, but don’t. For example, the word committee, c-o-m-m-i-t-t-e-e. It would be great except for the ‘i’ that sneaks in there. Or Mississippi: M-i-s-s-i-s-s-i-p-p-i. If you could take out those i’s it would work. But there is a word that has three consecutive pairs of letters and to the best of my knowledge this may be the only word. Of course there are probably 500 more but I can only think of one." Here is a `sufficient wordlist <http://greenteapress.com/thinkpython2/code/words.txt>`_.
+
+4. In a Jupyter notebook, solve the following problem, which i took from *Think Python* by Allen B. Downey. Write a program that reads a list of words and returns a collection of all lists of words that are anagrams of each other, where the collection is sorted from the longest list of anagrams to the shortest list and where the shortest list is of size at least 2.
+
+  Here is an example of what some of the output might look like::
+
+      [
+      ['deltas', 'desalt', 'lasted', 'salted', 'slated', 'staled'],
+      ['resmelts', 'smelters', 'termless'],
+      ['retainers', 'ternaries'],
+      ['generating', 'greatening'],
+      ]
+
+  Use your function to find all the anagrams in the word list given in problem 3 above. 
+  Hint: you might want to build a dictionary that maps a collection of letters to a list of words that can be spelled with those letters.
 
 
 Homework 2
