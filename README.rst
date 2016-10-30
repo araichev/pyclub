@@ -72,17 +72,21 @@ Homework 2
 
       def read_gtfs(path):
           """
-          Given a path (string or pathlib object) to a (zipped) GTFS feed, 
-          unzip the feed and save the files to a dictionary whose keys are 
+          Given a path (string or pathlib object) to a (zipped) GTFS feed,
+          unzip the feed and save the files to a dictionary whose keys are
           named after GTFS tables ('stops', 'routes', etc.) and whose
           corresponding values are Pandas data frames representing the tables.
-          Return the resulting dictionary. 
+          Return the resulting dictionary.
+
+          NOTES:
+              - Ignore files that are not valid GTFS; see https://developers.google.com/transit/gtfs/reference/.
+              - Ensure that all ID fields that could be strings ('stop_id', 'route_id', etc.) are parsed as strings and not as numbers.    
           """
           pass
 
-  Hint: Use Pandas's ``read_csv`` function.
+  Hint: Use the functions ``shutil.unarchive`` and ``pandas.read_csv`` with the 'dtypes' keyword argument.
 
-4. Using the Auckland GTFS feed and the output of your ``read_gtfs`` function, find the route with the longest trip and the length of that trip and find the route with the shortest trip and the length of that trip. By the way, the distances in the Auckland feed are measured in kilometers. 
+4. Using the Auckland GTFS feed and the output of your ``read_gtfs`` function, find the bus route with the longest trip and the length of that trip and find the route with the shortest trip and the length of that trip. By the way, the distances in the Auckland feed are measured in kilometers. 
 
 
 Homework 3
