@@ -91,7 +91,67 @@ Homework 2
 
 Homework 3
 ===========
-| Theme: geography and GTFS
+| Theme: Shapely, GeoJSON, and GTFS
 | Due: 2016-11-29
 
-1. Read the `Wikipedia page on GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_. Create a GeoJSON feature collection consisting of two linestrings encoding the shapes of the trips you found Homework 2.4. Cut and paste that feature collection into `geojson.io <http://geojson.io>`_ to visualize the trips. Hint: Create the feature collection as a Python dictionary and then convert it to a JSON string via the ``dumps`` function of Python's built-in ``json`` library.
+1. In your PyClub virtual environment install Shapely. Then read the 'Introduction' section of the `Shapely user manual  <http://toblerity.org/shapely/manual.html>`_. 
+
+2. Recall your GTFS reader from Homework 2.3, and let us call the output of it a *GTFS feed object*. Implement the following function that converts GTFS shapes to Shapely LineString objects.
+
+  .. code-block:: python
+
+      def shape_to_geometry(feed, shape_id):
+          """
+          Given a GTFS feed object and a shape ID from that feed, 
+          return a Shapely linestring representation of the shape 
+          (in WGS84 coordinates, the native coordinate system of GTFS).
+
+          NOTES:
+              Raise a ``ValueError`` if ``feed['shapes']`` does not exist or 
+              if the shape ID does not exist.
+          """
+          pass
+
+3. Read the `Wikipedia page on GeoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_. Read also the 'Interoperation' section of the Shapely user manual, and notice that Shapely plays nicely with GeoJSON via the functions  ``shapely.geometry.mapping` and ``shapely.geometry.shape``.
+
+4. Implement the following function that converts GTFS trips to GeoJSON features (as Python dictionaries).
+
+  .. code-block:: python
+
+      def trip_to_geojson(feed, trip_id):
+          """
+          Given a GTFS feed object and a trip ID from that feed, 
+          return a GeoJSON LineString feature (as a Python dictionary) 
+          representing the trip's geometry and its metadata 
+          (trip ID, direction ID, headsign, etc.).
+          Use WGS84 coordinates, the native coordinate system of GTFS.
+
+          NOTES:
+              Raise a ``ValueError`` if the appropriate GTFS data does not exist.
+          """
+          pass
+
+  Hint: Use the function ``shapely.geometry.mapping`` to quickly convert a Shapely geometry into a GeoJSON geometry.
+
+  As a way to test your function's output, convert it to a JSON string via Python's built in ``json.dumps`` function, and then paste that feature collection into `geojson.io <http://geojson.io>`_ as one of the elements in the ``features`` list.
+
+5. Use your functions above to create a simple screen line counter:
+
+  .. code-block:: python
+
+    def compute_screen_line_counts(feed, linestring):
+        """
+        Find all trips in the given GTFS feed object that intersect the given Shapely LineString 
+        (given in WGS84 coordinates), and return a data frame with the columns:
+
+        - ``'trip_id'``
+        - ``'route_id'``
+        - ``'route_short_name'``
+        - ``'direction_id'``
+        """
+        pass
+
+
+6. Use your screen line counter to count the number of trips that cross the Auckland Harbour Bridge. Hint: draw your screen line with GeoJSON IO and convert it to a Shapely LineString with the help of the ``shapely.geometry.shape`` function.
+
+  What basic feature(s) is the screen line counter missing to make its output useful to transit analysts?
