@@ -100,15 +100,18 @@ Homework 3
 
   .. code-block:: python
 
-      def shape_to_geometry(feed, shape_id):
+      def build_geometry_by_shape(feed, shape_ids=None):
           """
-          Given a GTFS feed object and a shape ID from that feed, 
-          return a Shapely linestring representation of the shape 
-          (in WGS84 coordinates, the native coordinate system of GTFS).
+          Given a GTFS feed object, return a dictionary with structure 
+          shape ID -> Shapely LineString representation of shape,
+          where the dictionary ranges over all shapes in the feed.
+          Use WGS84 longitude-latitude coordinates, the native coordinate system of GTFS.
 
+          If a list of shape IDs ``shape_ids`` is given, 
+          then only include the given shape IDs in the dictionary.
+          
           NOTES:
-              Raise a ``ValueError`` if ``feed['shapes']`` does not exist or 
-              if the shape ID does not exist.
+              - Raise a ValueError if the feed has no shapes
           """
           pass
 
@@ -131,9 +134,9 @@ Homework 3
           """
           pass
 
-  Hint: Use the function ``shapely.geometry.mapping`` to quickly convert a Shapely geometry into a GeoJSON geometry.
+  Hint: Use the function ``shapely.geometry.mapping`` to quickly convert a Shapely geometry into a GeoJSON geometry. Also, replace ``numpy.nan`` data values with a string such as ``'n/a'`` to avoid hassles when dumping to JSON.
 
-  As a way to test your function's output, convert it to a JSON string via Python's built in ``json.dumps`` function, and then paste that feature collection into `geojson.io <http://geojson.io>`_ as one of the elements in the ``features`` list.
+  As a way to test your function's output, convert it to a JSON string via Python's built in ``json.dumps`` function, and then paste that feature collection into `geojson.io <http://geojson.io>`_ as one of the elements in the ``features`` list. You can also test your output at `GeoJSONLint <http://geojsonlint.com/>`_.
 
 5. Use your functions above to create a simple screen line counter:
 
@@ -154,4 +157,4 @@ Homework 3
 
 6. Use your screen line counter to count the number of trips that cross the Auckland Harbour Bridge. Hint: draw your screen line with GeoJSON IO and convert it to a Shapely LineString with the help of the ``shapely.geometry.shape`` function.
 
-  What basic feature(s) is the screen line counter missing to make its output useful to transit analysts?
+  What basic feature(s) is the screen line counter missing to make its output useful to transit analysts? How could you speed up your function?
