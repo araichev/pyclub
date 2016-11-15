@@ -84,7 +84,7 @@ Homework 2
           """
           pass
 
-  Hint: Use the functions ``shutil.unarchive`` and ``pandas.read_csv`` with the 'dtypes' keyword argument.
+  Hint: Use the functions ``shutil.unpack_archive`` and ``pandas.read_csv`` with the 'dtypes' keyword argument.
 
 4. Using the Auckland GTFS feed and the output of your ``read_gtfs`` function, find the bus route with the longest trip and the length of that trip and find the route with the shortest trip and the length of that trip. By the way, the distances in the Auckland feed are measured in kilometers. 
 
