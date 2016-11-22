@@ -31,8 +31,7 @@ Introduction
 
 Homework 1
 ===========
-| Theme: Set up and warm up
-| Due: 2016-11-01
+Theme: Set up and warm up
 
 1. On your computer, install Python 3.5, a virtual environment manager, and a Python package manager. You can do all this at once in a straightforward and cross-platform way by installing `Anaconda <https://www.continuum.io/downloads#windows>`_. Here is some `Reddit cheer for Anaconda <https://www.reddit.com/r/Python/comments/3t23vv/what_advantages_are_there_of_using_anaconda/>`_.  Alternatively on OS X, you can use Homebrew to install Python 3.5, virtualenv, virtualenvwrapper, and pip. Alternatively on Linux, you can use apt to install these.
 
@@ -59,12 +58,11 @@ Homework 1
 
 Homework 2
 ===========
-| Theme: Pandas and GTFS
-| Due: 2016-11-15
+Theme: Pandas and GTFS
 
 1. In your PyClub virtual environment install `Pandas <http://pandas.pydata.org/>`_. Complete the Pandas tutorial `here <synesthesiam.com/posts/an-introduction-to-pandas.html>`_, ignoring the first installation step, which you already did. The tutorial uses an older version of Pandas than yours, so some function APIs might have changed. If you encounter errors, check the `Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/>`_ for the current correct usage.
 
-2. Read the `Wikipedia page on GTFS <https://en.wikipedia.org/wiki/GTFS>`_.
+2. Read the `Wikipedia page on GTFS <https://en.wikipedia.org/wiki/GTFS>`_, and for more information see the `GTFS reference <https://developers.google.com/transit/gtfs/>`_. 
 
 3. Download a cleaned version of Auckland's latest GTFS feed from ``data/homework_02``. Working in a Jupyter notebook, complete the following function and test it.
 
@@ -91,8 +89,7 @@ Homework 2
 
 Homework 3
 ===========
-| Theme: Shapely, GeoJSON, and GTFS
-| Due: 2016-11-29
+Theme: Shapely, GeoJSON, and GTFS
 
 1. In your PyClub virtual environment install Shapely. Then read the 'Introduction' section of the `Shapely user manual  <http://toblerity.org/shapely/manual.html>`_. 
 
