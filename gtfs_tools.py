@@ -1,9 +1,42 @@
 from pathlib import Path
+import tempfile
 import shutil
 
 import pandas as pd
 import numpy as np
 
+
+GTFS_TABLES = [
+    'agency',
+    'stops',
+    'routes',
+    'trips',
+    'stop_times',
+    'calendar',
+    'calendar_dates',
+    'fare_attributes',
+    'fare_rules',
+    'shapes',
+    'frequencies',
+    'transfers',
+    'feed_info',
+    ]
+
+STR_FIELDS = [
+  'agency_id'
+  'trip_id',
+  'service_id',
+  'shape_id',
+  'block_id',
+  'route_id',
+  'stop_id',
+  'fare_id',
+  'origin_id',
+  'destination_id',
+  'contains_id',
+  'from_stop_id',
+  'to_stop_id',
+]
 
 GTFS_TABLES = [
     'agency',
@@ -51,14 +84,14 @@ def read_gtfs(path):
     """
     path = Path(path)
     
-    # Unzip feed
-    extract_dir = path.with_name(path.stem)
-    shutil.unpack_archive(str(path), str(extract_dir), 'zip')
+    # Unzip feed into temporary directory
+    tmp_dir = tempfile.TemporaryDirectory()
+    shutil.unpack_archive(str(path), tmp_dir.name, 'zip')
 
     # Read files into Pandas data frames
     feed = {}
     dtype = {field: str for field in STR_FIELDS} # ensure some string types
-    for p in extract_dir.iterdir():
+    for p in Path(tmp_dir.name).iterdir():
         name = p.stem
         
         # Skip invalid files
@@ -69,6 +102,6 @@ def read_gtfs(path):
         feed[name] = pd.read_csv(p, dtype=dtype)
         
     # Delete temporary directory
-    shutil.rmtree(str(extract_dir))
+    tmp_dir.cleanup()
     
     return feed
