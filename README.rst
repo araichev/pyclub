@@ -155,3 +155,9 @@ Theme: Shapely, GeoJSON, and GTFS
 6. Use your screen line counter to count the number of trips that cross the Auckland Harbour Bridge. Hint: draw your screen line with GeoJSON IO and convert it to a Shapely LineString with the help of the ``shapely.geometry.shape`` function.
 
   What basic feature(s) is the screen line counter missing to make its output useful to transit analysts? How could you speed up your function?
+
+
+Resources
+==========
+- `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
+- `PEP8 <http://pep8.org/>`_
