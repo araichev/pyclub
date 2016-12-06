@@ -88,18 +88,13 @@ def read_gtfs(path):
     tmp_dir = tempfile.TemporaryDirectory()
     shutil.unpack_archive(str(path), tmp_dir.name, 'zip')
 
-    # Read files into Pandas data frames
+    # Read valid GTFS files into Pandas data frames
     feed = {}
     dtype = {field: str for field in STR_FIELDS} # ensure some string types
-    for p in Path(tmp_dir.name).iterdir():
+    for p in Path(tmp_dir.name).iterdir():        
         name = p.stem
-        
-        # Skip invalid files
-        if name not in GTFS_TABLES:
-            continue
-        
-        # Read valid files
-        feed[name] = pd.read_csv(p, dtype=dtype)
+        if name in GTFS_TABLES:
+            feed[name] = pd.read_csv(p, dtype=dtype)
         
     # Delete temporary directory
     tmp_dir.cleanup()

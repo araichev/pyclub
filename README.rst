@@ -155,3 +155,22 @@ Theme: Shapely, GeoJSON, and GTFS
 6. Use your screen line counter to count the number of trips that cross the Auckland Harbour Bridge. Hint: draw your screen line with GeoJSON IO and convert it to a Shapely LineString with the help of the ``shapely.geometry.shape`` function.
 
   What basic feature(s) is the screen line counter missing to make its output useful to transit analysts? How could you speed up your function?
+
+
+Homework 4
+===========
+Theme: Git
+
+This homework assignment is not about data analysis per se, but understanding the content herein ---version control in general and Git in particular--- will help you tremendously on all your data analysis and programming projects.
+
+1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_.
+
+2. Initialize a Git repository in your PyClub directory and use Git from now on to track its changes.
+
+3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
+
+
+Resources
+==========
+- `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
+- `PEP8 <http://pep8.org/>`_
