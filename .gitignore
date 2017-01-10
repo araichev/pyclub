@@ -1,4 +1,4 @@
 *__pycache__
 .DS_Store
-ipynb/.ipynb_checkpoints
-homework_solutions
+*.ipynb_checkpoints
+temp
