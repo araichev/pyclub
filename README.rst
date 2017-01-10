@@ -170,6 +170,21 @@ This homework assignment is not about data analysis per se, but understanding th
 3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
 
 
+Homework 5
+===========
+Theme: GeoPandas
+
+1. `Read about GeoPandas <http://geopandas.org/index.html>`_ and then `install it <http://geopandas.org/install.html>`_.
+
+2. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. (I got this data from Anthony who got it from ??) Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters. Restrict the data to Auckland locations and to crashes involving pedestrians or cyclists.
+
+3. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. (I got this data from `Mapzen metro extracts (IMPOSM format) here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.)  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193).
+
+4. Plot the crashes overlayed on the roads.
+
+5. Find and plot the crashiest roads in Auckland for walking and cycling?  Hint: Buffer the crash points by 10 meters, say, and spatially join them with the roads. Aggregate the result to get a list of roads and the number of buffered crash points they contain. Assign colors to the roads based on the number of crashes and plot the roads. 
+
+
 Resources
 ==========
 - `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
