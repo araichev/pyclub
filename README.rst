@@ -176,14 +176,18 @@ Theme: GeoPandas
 
 1. `Read about GeoPandas <http://geopandas.org/index.html>`_ and then `install it <http://geopandas.org/install.html>`_.
 
-2. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. (I got this data from Anthony who got it from ??) Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters. Restrict the data to Auckland locations and to crashes involving pedestrians or cyclists.
+2. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. (I got this data from `Mapzen metro extracts IMPOSM format here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.)  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters.
 
-3. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. (I got this data from `Mapzen metro extracts (IMPOSM format) here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.)  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193).
+3. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. (I got this data from Anthony who got it from ??) Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193). Restrict the crashes to Auckland locations and to crashes involving pedestrians or cyclists.
 
-4. Plot the crashes overlayed on the roads.
+4. Plot the crashes overlaid on the roads.
 
-5. Find and plot the crashiest roads in Auckland for walking and cycling?  Hint: Buffer the crash points by 10 meters, say, and spatially join them with the roads. Aggregate the result to get a list of roads and the number of buffered crash points they contain. Assign colors to the roads based on the number of crashes and plot the roads. 
+5. Find and plot the crashiest roads in Auckland. 
+  Score each road according to the sum of its number of crashes weighted by crash severity (e.g. fatal = 3, serious = 2, minor = 1), and then color-code the roads by its score.
 
+  Hint: Buffer the crash points by 20 meters, say, and spatially join them with the roads. 
+  Aggregate the result to calculate the crash score for each road.
+  
 
 Resources
 ==========
