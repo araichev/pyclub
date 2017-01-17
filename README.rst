@@ -176,21 +176,20 @@ Theme: GeoPandas
 
 1. `Read about GeoPandas <http://geopandas.org/index.html>`_ and then `install it <http://geopandas.org/install.html>`_.
 
-2. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. (I got this data from `Mapzen metro extracts IMPOSM format here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.)  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters.
+2. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. I got this data from `Mapzen metro extracts IMPOSM format here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters.
 
-3. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. (I got this data from Anthony who got it from ??) Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193). Restrict the crashes to Auckland locations.
+3. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. I got this data from `NZTA <http://www.nzta.govt.nz/safety/safety-resources/road-safety-information-and-tools/disaggregated-crash-data/>`_.  Set the project for the geodataframe to the New Zealand Transvere Mercator projection (EPSG 2193). Restrict the crashes to Auckland locations.
 
 4. Plot the crashes overlaid on the roads in your notebook.
 
-5. Compute the crashiest roads in Auckland.
-  Do this by scoring each road according to the sum of its number of crashes divided its length in meters.
+5. Compute Auckland's crashy roads. Do this by scoring each road according to the sum of its number of crashes divided by its length in meters.
 
   Hint: Buffer the crash points by 10 meters, say, and spatially join them with the roads. 
   Aggregate the result to calculate the crash score for each road.
   
-6. Plot the result GeoJSON IO, color-coding the roads by crash score.
+6. Plot the result using GeoJSON IO, color-coding the roads by crash score.
 
-  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON.
+  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, for smoothly blending colors is a nice extra touch.
 
 
 Resources
