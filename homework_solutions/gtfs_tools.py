@@ -36,6 +36,7 @@ STR_FIELDS = [
   'contains_id',
   'from_stop_id',
   'to_stop_id',
+  'parent_station',
 ]
 
 GTFS_TABLES = [

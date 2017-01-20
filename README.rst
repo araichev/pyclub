@@ -189,7 +189,32 @@ Theme: GeoPandas
   
 6. Plot the result using GeoJSON IO, color-coding the roads by crash score.
 
-  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, for smoothly blending colors is a nice extra touch.
+  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+
+Homework 6
+===========
+Theme: Requests
+
+1. Read about HTTP requests and the Requests library, and then install Requests.
+
+2. Play with the `Mapzen isochrone API <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_ enough to issue a successful GET request. You'll need a Mapzen API key for this, which you can `get from Mapzen here <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_, if you have a Github account, or you can use my API key, which you can get from me in person. Heed the `rate limits <https://mapzen.com/documentation/overview/#mapzen-isochrone>`_ on the isochrone API. 
+
+3. Extract all the train stations from the Auckland GTFS feed in the ``data`` directory. 
+
+  Hint: Look for the word 'Train' in the ``stop_name`` column. 
+
+4. For each train station, compute its 1 km walking catchment (as a polygon) using the Mapzen isochrone API. Because the API only accepts time limits and not distance limits, we have to approximate this computation by choosing an appropriate walking speed and time limit to imitate a 1 km distance limit, e.g. 1 km/h and 60 minutes. Additionally for each train station compute its 1 km flying catchment (as a polygon, which will be a circle around the station of radius 1 km).
+
+  Hint: For the flying catchments, you can use GeoPandas, the NZTM projection (EPSG 2193), and the ``buffer`` function.
+  
+5. For each train station, compute the ratio of its walking catchment area to its flying catchment area.
+
+6. Plot the flying catchments, walking catchments, and train stations (in that order) using GeoJSON IO, color-coding the walking catchments by area ratio.
+
+  Hint: Add to your geodataframe of walking catchments the extra columns "fill" (HEX color code) and "fill-opacity" (float between 0 (clear) to 1 (opaque)) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+7. Is the area ratio above a good measure of walking accessibility of the train stations? Discuss, and discuss other measures.
 
 
 Resources
