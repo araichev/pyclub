@@ -163,11 +163,13 @@ Theme: Git
 
 This homework assignment is not about data analysis per se, but understanding the content herein ---version control in general and Git in particular--- will help you tremendously on all your data analysis and programming projects.
 
-1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_.
+1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_. Additionally, if you have a Lynda account, check out `this Lynda tutorial <https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html>`_.
 
 2. Initialize a Git repository in your PyClub directory and use Git from now on to track its changes.
 
 3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
+
+4. If you are working in a team, read `this article <https://www.atlassian.com/git/tutorials/comparing-workflows>`_. to learn more about different workflows which are possible using Git repositories. 
 
 
 Homework 5
