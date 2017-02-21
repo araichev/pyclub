@@ -163,11 +163,58 @@ Theme: Git
 
 This homework assignment is not about data analysis per se, but understanding the content herein ---version control in general and Git in particular--- will help you tremendously on all your data analysis and programming projects.
 
-1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_.
+1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_. For more practice, work through `these Lyndia tutorials <https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html>`_.
 
 2. Initialize a Git repository in your PyClub directory and use Git from now on to track its changes.
 
-3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
+3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository.  You might also want to read `this tutorial on collaborative Git workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>`_.
+
+
+Homework 5
+===========
+Theme: GeoPandas
+
+1. `Read about GeoPandas <http://geopandas.org/index.html>`_ and then `install it <http://geopandas.org/install.html>`_.
+
+2. Create a GeoPandas geodataframe of Auckland roads from the appropriate file in the ``data`` directory. I got this data from `Mapzen metro extracts IMPOSM format here <https://mapzen.com/data/metro-extracts/metro/auckland_new-zealand/>`.  Reproject the data from the WGS84 projection (EPSG 4326) to New Zealand Transvere Mercator projection (EPSG 2193) so that the units will be meters.
+
+3. Create a GeoPandas geodataframe of New Zealand crash point locations from the appropriate file in the ``data`` directory. I got this data from `NZTA <http://www.nzta.govt.nz/safety/safety-resources/road-safety-information-and-tools/disaggregated-crash-data/>`_.  Set the project for the geodataframe to the New Zealand Transvere Mercator projection (EPSG 2193). Restrict the crashes to Auckland locations.
+
+4. Plot the crashes overlaid on the roads in your notebook.
+
+5. Compute Auckland's crashy roads. Do this by scoring each road according to the sum of its number of crashes divided by its length in meters.
+
+  Hint: Buffer the crash points by 10 meters, say, and spatially join them with the roads. 
+  Aggregate the result to calculate the crash score for each road.
+  
+6. Plot the result using GeoJSON IO, color-coding the roads by crash score.
+
+  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+
+Homework 6
+===========
+Theme: Requests
+
+1. Read about HTTP requests and the Requests library, and then install Requests.
+
+2. Play with the `Mapzen isochrone API <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_ enough to issue a successful GET request. You'll need a Mapzen API key for this, which you can `get from Mapzen here <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_, if you have a Github account, or you can use my API key, which you can get from me in person. Heed the `rate limits <https://mapzen.com/documentation/overview/#mapzen-isochrone>`_ on the isochrone API. 
+
+3. Extract all the train stations from the Auckland GTFS feed in the ``data`` directory. 
+
+  Hint: Look for the word 'Train' in the ``stop_name`` column. 
+
+4. For each train station, compute its 1 km walking catchment (as a polygon) using the Mapzen isochrone API. Because the API only accepts time limits and not distance limits, we have to approximate this computation by choosing an appropriate walking speed and time limit to imitate a 1 km distance limit, e.g. 1 km/h and 60 minutes. Additionally for each train station compute its 1 km flying catchment (as a polygon, which will be a circle around the station of radius 1 km).
+
+  Hint: For the flying catchments, you can use GeoPandas, the NZTM projection (EPSG 2193), and the ``buffer`` function.
+  
+5. For each train station, compute the ratio of its walking catchment area to its flying catchment area.
+
+6. Plot the flying catchments, walking catchments, and train stations (in that order) using GeoJSON IO, color-coding the walking catchments by area ratio.
+
+  Hint: Add to your geodataframe of walking catchments the extra columns "fill" (HEX color code) and "fill-opacity" (float between 0 (clear) to 1 (opaque)) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+7. Is the area ratio above a good measure of walking accessibility of the train stations? Discuss, and discuss other measures.
 
 
 Resources
