@@ -167,9 +167,7 @@ This homework assignment is not about data analysis per se, but understanding th
 
 2. Initialize a Git repository in your PyClub directory and use Git from now on to track its changes.
 
-3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
-
-4. Read `this tutorial on collaborative workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>`_.
+3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository.  You might also want to read `this tutorial on collaborative Git workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>`_.
 
 
 Homework 5
