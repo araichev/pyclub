@@ -194,7 +194,7 @@ Theme: GeoPandas
 
 Homework 6
 ===========
-Theme: Requests
+Theme: Web APIs
 
 1. Read about HTTP requests and the Requests library, and then install Requests.
 
@@ -215,6 +215,14 @@ Theme: Requests
   Hint: Add to your geodataframe of walking catchments the extra columns "fill" (HEX color code) and "fill-opacity" (float between 0 (clear) to 1 (opaque)) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
 
 7. Is the area ratio above a good measure of walking accessibility of the train stations? Discuss, and discuss other measures.
+
+
+Homework 7
+===========
+Theme: plotting
+
+- Overview of `useful Python plotting libraries <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_
+- `Python plotting tour <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_
 
 
 Resources
