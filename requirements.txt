@@ -1,4 +1,5 @@
 appnope==0.1.0
+brewer2mpl==1.4.1
 click==6.7
 click-plugins==1.0.3
 cligj==0.4.0
@@ -11,6 +12,7 @@ Fiona==1.7.1.post1
 future==0.16.0
 geojsonio==0.0.2
 geopandas==0.2.1
+ggplot==0.11.5
 github3.py==0.9.3
 ipykernel==4.5.0
 ipython==5.1.0
@@ -23,15 +25,16 @@ jupyter-client==4.4.0
 jupyter-console==5.0.0
 jupyter-core==4.2.0
 MarkupSafe==0.23
-matplotlib==1.5.3
+matplotlib==2.0.0
 mistune==0.7.3
 munch==2.0.4
 nbconvert==4.2.0
 nbformat==4.1.0
 networkx==1.11
 notebook==4.2.3
-numpy==1.11.3
+numpy==1.12.0
 pandas==0.19.2
+patsy==0.4.1
 pexpect==4.2.1
 pickleshare==0.7.4
 prompt-toolkit==1.0.8
@@ -46,10 +49,12 @@ pyzmq==16.0.0
 qtconsole==4.2.1
 requests==2.12.4
 Rtree==0.8.3
+scipy==0.18.1
 Shapely==1.5.17
 simplegeneric==0.8.1
 six==1.10.0
 spectra==0.0.7
+statsmodels==0.8.0
 terminado==0.6
 tornado==4.4.2
 traitlets==4.3.1

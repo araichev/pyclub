@@ -194,7 +194,7 @@ Theme: GeoPandas
 
 Homework 6
 ===========
-Theme: Web APIs
+Theme: web APIs
 
 1. Read about HTTP requests and the Requests library, and then install Requests.
 
@@ -221,8 +221,11 @@ Homework 7
 ===========
 Theme: plotting
 
-- Overview of `useful Python plotting libraries <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_
-- `Python plotting tour <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_
+1. There are *heaps* of plotting libraries for Python. For a brief overview of some popular ones, read `this blog post <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_.  If you have extra time, i recommend reading `this deeper and funnier overview of Matplotlib, Pandas, Seaborn, ggplot, and Altair <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_. 
+
+2. I want to focus on just one library here, one that i found easy to learn, has good documention, is quite customizable, and produces interactive plots: `python-highcharts <https://github.com/kyper-data/python-highcharts>`_.  It is a Python wrapper for the JavaScript plotting library Highcharts.  Read about python-highcharts and install it.
+
+3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_. 
 
 
 Resources
