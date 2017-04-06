@@ -228,6 +228,27 @@ Theme: plotting
 3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_. 
 
 
+Homework 8
+===========
+Theme: automated testing
+
+1. Read the `this introduction to automated testing in Python <https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/>`_, then read the good tips at the beginning of `the Python Guide section on testing <https://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/>`_.
+
+2. Read `the getting started section of pytest <https://docs.pytest.org/en/latest/getting-started.html>`_ and install pytest.
+
+3. Using pytest, write some automated tests for a project you've been working on. Where to put these tests?  Follow `the Python Guide advice on structuring your project <https://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/>`_.
+
+
+Homework ?
+===========
+Theme: object-oriented programming
+
+1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
+
+2. Rewrite your GTFS dictionary as a class with the following specifications...
+
+
+
 Resources
 ==========
 - `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
