@@ -228,7 +228,7 @@ Theme: plotting
 3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_. 
 
 
-Homework ?
+Homework 7
 ===========
 Theme: automated testing
 
@@ -243,9 +243,9 @@ Homework ?
 ===========
 Theme: object-oriented programming
 
-1. Read about object-oriented programming (OOP) in Python. `Here is one good tutorial out of thousands <http://www.python-course.eu/python3_object_oriented_programming.php>`_.  If you are keen, read the subsequent chapters in the tutorial up to and including "Metaclass Use Case".
+1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
 
-2. Rewrite you GTFS dictionary as a class with the following specifications.
+2. Rewrite your GTFS dictionary as a class with the following specifications...
 
 
 
