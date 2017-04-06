@@ -228,7 +228,7 @@ Theme: plotting
 3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_. 
 
 
-Homework 7
+Homework 8
 ===========
 Theme: automated testing
 
