@@ -239,14 +239,13 @@ Theme: automated testing
 3. Using pytest, write some automated tests for a project you've been working on. Where to put these tests?  Follow `the Python Guide advice on structuring your project <https://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/>`_.
 
 
-Homework ?
+Homework 9
 ===========
 Theme: object-oriented programming
 
 1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
 
-2. Rewrite your GTFS dictionary as a class with the following specifications...
-
+2. Rewrite your GTFS utilities from Homeworks 2 & 3 in an object-oriented way. In particular, create a Feed class to represent GTFS feeds, convert your feed functions into Feed methods, and rewrite the function ``read_gtfs()`` to output a Feed instance. 
 
 
 Resources
