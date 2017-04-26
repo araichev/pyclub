@@ -163,11 +163,11 @@ Theme: Git
 
 This homework assignment is not about data analysis per se, but understanding the content herein ---version control in general and Git in particular--- will help you tremendously on all your data analysis and programming projects.
 
-1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_.
+1. Read the beginning of the `Wikipedia article on Git <https://en.wikipedia.org/wiki/Git>`_. Read `this conceptual Git tutorial <https://www.sbf5.com/~cduan/technical/git/>`_. Do `this interactive, command-driven Git tutorial <https://try.github.io/levels/1/challenges/1>`_. For more practice, work through `these Lyndia tutorials <https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html>`_.
 
 2. Initialize a Git repository in your PyClub directory and use Git from now on to track its changes.
 
-3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository. 
+3. If you work on PyClub on more than one computer or on a team, create a Github account (free public repositories) or a Gitlab account (free public *and* private repositories) to host your PyClub Git repository on the web. Practice syncing your local Git repository with this remote Git repository.  You might also want to read `this tutorial on collaborative Git workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>`_.
 
 
 Homework 5
@@ -189,7 +189,63 @@ Theme: GeoPandas
   
 6. Plot the result using GeoJSON IO, color-coding the roads by crash score.
 
-  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, for smoothly blending colors is a nice extra touch.
+  Hint: Add to your geodataframe from step 5 the extra columns "stroke" (line color as a HEX color code) and "stroke-width" (line weight in number of pixels) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+
+Homework 6
+===========
+Theme: web APIs
+
+1. Read about HTTP requests and the Requests library, and then install Requests.
+
+2. Play with the `Mapzen isochrone API <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_ enough to issue a successful GET request. You'll need a Mapzen API key for this, which you can `get from Mapzen here <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_, if you have a Github account, or you can use my API key, which you can get from me in person. Heed the `rate limits <https://mapzen.com/documentation/overview/#mapzen-isochrone>`_ on the isochrone API. 
+
+3. Extract all the train stations from the Auckland GTFS feed in the ``data`` directory. 
+
+  Hint: Look for the word 'Train' in the ``stop_name`` column. 
+
+4. For each train station, compute its 1 km walking catchment (as a polygon) using the Mapzen isochrone API. Because the API only accepts time limits and not distance limits, we have to approximate this computation by choosing an appropriate walking speed and time limit to imitate a 1 km distance limit, e.g. 1 km/h and 60 minutes. Additionally for each train station compute its 1 km flying catchment (as a polygon, which will be a circle around the station of radius 1 km).
+
+  Hint: For the flying catchments, you can use GeoPandas, the NZTM projection (EPSG 2193), and the ``buffer`` function.
+  
+5. For each train station, compute the ratio of its walking catchment area to its flying catchment area.
+
+6. Plot the flying catchments, walking catchments, and train stations (in that order) using GeoJSON IO, color-coding the walking catchments by area ratio.
+
+  Hint: Add to your geodataframe of walking catchments the extra columns "fill" (HEX color code) and "fill-opacity" (float between 0 (clear) to 1 (opaque)) and then export to GeoJSON. Using the `Spectra library <https://github.com/jsvine/spectra>`_, say, to smoothly blend colors is a nice extra touch.
+
+7. Is the area ratio above a good measure of walking accessibility of the train stations? Discuss, and discuss other measures.
+
+
+Homework 7
+===========
+Theme: plotting
+
+1. There are *heaps* of plotting libraries for Python. For a brief overview of some popular ones, read `this blog post <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_.  If you have extra time, i recommend reading `this deeper and funnier overview of Matplotlib, Pandas, Seaborn, ggplot, and Altair <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_. 
+
+2. I want to focus on just one library here, one that i found easy to learn, has good documention, is quite customizable, and produces interactive plots: `python-highcharts <https://github.com/kyper-data/python-highcharts>`_.  It is a Python wrapper for the JavaScript plotting library Highcharts.  Read about python-highcharts and install it.
+
+3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_. 
+
+
+Homework 8
+===========
+Theme: automated testing
+
+1. Read the `this introduction to automated testing in Python <https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/>`_, then read the good tips at the beginning of `the Python Guide section on testing <https://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/>`_.
+
+2. Read `the getting started section of pytest <https://docs.pytest.org/en/latest/getting-started.html>`_ and install pytest.
+
+3. Using pytest, write some automated tests for a project you've been working on. Where to put these tests?  Follow `the Python Guide advice on structuring your project <https://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/>`_.
+
+
+Homework 9
+===========
+Theme: object-oriented programming
+
+1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
+
+2. Rewrite your GTFS utilities from Homeworks 2 & 3 in an object-oriented way. In particular, create a Feed class to represent GTFS feeds, convert your feed functions into Feed methods, and rewrite the function ``read_gtfs()`` to output a Feed instance. 
 
 
 Resources
