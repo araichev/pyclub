@@ -1,15 +1,15 @@
 PyClub 
 *******
-This is a repository of supporting material for PyClub, a work-time meetup about Python and data science at MRCagney.
+This is a repository of supporting material for PyClub, a work-time meetup about Python and data analysis at MRCagney.
 
 
 Introduction
 =============
-- Motivation: Upskill on Python for data science. Python is useful, data science is useful, and the two together are a powerful combination.
+- Motivation: Upskill on Python for data analysis. Python is useful, data analysis is useful, and the two together are a powerful combination.
 
 - Focus: Tools and processes for analyzing transit and geospatial data, because that's our main work at MRCagney
 
-- Assumption: You have Python proficiency at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they're not too different.
+- Assumption: You are proficient in Python at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they're not too different.
 
 - Third-party Python libraries that we will use a lot:
 
@@ -19,14 +19,14 @@ Introduction
   * Geopandas, which combines Shapely with Pandas
   * GTFSTK for GTFS feeds
 
-- Other notable third-party Python libraries for data science:
+- Other notable third-party Python libraries for data analysis:
   
   * SciPy for scientific/engineering computing
-  * Matplotlib and Seaborn for plotting and (static) visualization.
   * Statsmodels for statistical modeling
   * Scikit-Learn for machine learning
   * Requests for API calls
   * Scrapy for web crawling and scraping
+  * Python-Highcharts for plotting
 
 
 Homework 1
@@ -58,7 +58,7 @@ Theme: Set up and warm up
 
 Homework 2
 ===========
-Theme: Pandas and GTFS
+Theme: Tabular data and GTFS
 
 1. In your PyClub virtual environment install `Pandas <http://pandas.pydata.org/>`_. Complete the Pandas tutorial `here <synesthesiam.com/posts/an-introduction-to-pandas.html>`_, ignoring the first installation step, which you already did. The tutorial uses an older version of Pandas than yours, so some function APIs might have changed. If you encounter errors, check the `Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/>`_ for the current correct usage.
 
@@ -89,7 +89,7 @@ Theme: Pandas and GTFS
 
 Homework 3
 ===========
-Theme: Shapely, GeoJSON, and GTFS
+Theme: Geodata
 
 1. In your PyClub virtual environment install Shapely. Then read the 'Introduction' section of the `Shapely user manual  <http://toblerity.org/shapely/manual.html>`_. 
 
@@ -159,7 +159,7 @@ Theme: Shapely, GeoJSON, and GTFS
 
 Homework 4
 ===========
-Theme: Git
+Theme: Source code control
 
 This homework assignment is not about data analysis per se, but understanding the content herein ---version control in general and Git in particular--- will help you tremendously on all your data analysis and programming projects.
 
@@ -172,7 +172,7 @@ This homework assignment is not about data analysis per se, but understanding th
 
 Homework 5
 ===========
-Theme: GeoPandas
+Theme: Geodata again
 
 1. `Read about GeoPandas <http://geopandas.org/index.html>`_ and then `install it <http://geopandas.org/install.html>`_.
 
@@ -194,7 +194,7 @@ Theme: GeoPandas
 
 Homework 6
 ===========
-Theme: web APIs
+Theme: Web APIs
 
 1. Read about HTTP requests and the Requests library, and then install Requests.
 
@@ -219,7 +219,7 @@ Theme: web APIs
 
 Homework 7
 ===========
-Theme: plotting
+Theme: Plotting
 
 1. There are *heaps* of plotting libraries for Python. For a brief overview of some popular ones, read `this blog post <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_.  If you have extra time, i recommend reading `this deeper and funnier overview of Matplotlib, Pandas, Seaborn, ggplot, and Altair <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_. 
 
@@ -230,7 +230,7 @@ Theme: plotting
 
 Homework 8
 ===========
-Theme: automated testing
+Theme: Automated testing
 
 1. Read the `this introduction to automated testing in Python <https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/>`_, then read the good tips at the beginning of `the Python Guide section on testing <https://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/>`_.
 
@@ -241,7 +241,7 @@ Theme: automated testing
 
 Homework 9
 ===========
-Theme: object-oriented programming
+Theme: Object-oriented programming
 
 1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
 
