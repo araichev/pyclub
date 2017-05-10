@@ -16,7 +16,7 @@ Conventions in the code below:
 from pathlib import Path
 import tempfile
 import shutil
-from copy import deepcopy
+from collections import OrderedDict
 
 import pandas as pd
 import shapely.geometry as sg
@@ -24,18 +24,18 @@ import shapely.geometry as sg
 
 GTFS_TABLES = [
     'agency',
-    'stops',
-    'routes',
-    'trips',
-    'stop_times',
     'calendar',
     'calendar_dates',
     'fare_attributes',
     'fare_rules',
-    'shapes',
-    'frequencies',
-    'transfers',
     'feed_info',
+    'frequencies',
+    'routes',
+    'shapes',
+    'stops',
+    'stop_times',
+    'trips',
+    'transfers',
     ]
 
 STR_FIELDS = [
@@ -92,6 +92,15 @@ class Feed(object):
             if prop in GTFS_TABLES:
                 setattr(self, prop, val)
                 
+    def __str__(self):
+        d = OrderedDict()
+        for table in GTFS_TABLES:
+            try:
+                d[table] = getattr(self, table).head(5)
+            except:
+                d[table] = None
+        return '\n'.join(['* {!s} --------------------\n\t{!s}'.format(k, v) for k, v in d.items()])
+
     def build_geometry_by_shape(self, shape_ids=None):
         """
         Given a GTFS feed object, return a dictionary with structure 
