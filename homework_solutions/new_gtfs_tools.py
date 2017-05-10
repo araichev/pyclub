@@ -22,39 +22,6 @@ import pandas as pd
 import shapely.geometry as sg
 
 
-GTFS_TABLES = [
-    'agency',
-    'calendar',
-    'calendar_dates',
-    'fare_attributes',
-    'fare_rules',
-    'feed_info',
-    'frequencies',
-    'routes',
-    'shapes',
-    'stops',
-    'stop_times',
-    'trips',
-    'transfers',
-    ]
-
-STR_FIELDS = [
-  'agency_id'
-  'trip_id',
-  'service_id',
-  'shape_id',
-  'block_id',
-  'route_id',
-  'stop_id',
-  'fare_id',
-  'origin_id',
-  'destination_id',
-  'contains_id',
-  'from_stop_id',
-  'to_stop_id',
-  'parent_station',
-]
-
 class Feed(object):
     """
     An instance of this class represents a not-necessarily-valid GTFS feed, where GTFS tables are stored as DataFrames.
@@ -76,6 +43,38 @@ class Feed(object):
     - ``transfers``
     - ``feed_info``
     """
+    gtfs_tables = [
+        'agency',
+        'calendar',
+        'calendar_dates',
+        'fare_attributes',
+        'fare_rules',
+        'feed_info',
+        'frequencies',
+        'routes',
+        'shapes',
+        'stops',
+        'stop_times',
+        'trips',
+        'transfers',
+        ]
+
+    str_fields= [
+      'agency_id'
+      'trip_id',
+      'service_id',
+      'shape_id',
+      'block_id',
+      'route_id',
+      'stop_id',
+      'fare_id',
+      'origin_id',
+      'destination_id',
+      'contains_id',
+      'from_stop_id',
+      'to_stop_id',
+      'parent_station',
+    ]
 
     def __init__(self, agency=None, stops=None, routes=None,
       trips=None, stop_times=None, calendar=None, calendar_dates=None,
@@ -89,12 +88,12 @@ class Feed(object):
         # Set primary attributes; the @property magic below will then
         # validate some and automatically set secondary attributes
         for prop, val in locals().items():
-            if prop in GTFS_TABLES:
+            if prop in Feed.gtfs_tables:
                 setattr(self, prop, val)
                 
     def __str__(self):
         d = OrderedDict()
-        for table in GTFS_TABLES:
+        for table in Feed.gtfs_tables:
             try:
                 d[table] = getattr(self, table).head(5)
             except:
@@ -207,10 +206,10 @@ def read_gtfs(path):
 
     # Read valid GTFS files into Pandas data frames
     feed_dict = {}
-    dtype = {field: str for field in STR_FIELDS} # ensure some string types
+    dtype = {field: str for field in Feed.str_fields} # ensure some string types
     for p in Path(tmp_dir.name).iterdir():        
         name = p.stem
-        if name in GTFS_TABLES:
+        if name in Feed.gtfs_tables:
             feed_dict[name] = pd.read_csv(p, dtype=dtype)
         
     # Delete temporary directory
