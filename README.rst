@@ -7,9 +7,9 @@ Introduction
 =============
 - Motivation: Upskill on Python for data analysis. Python is useful, data analysis is useful, and the two together are a powerful combination.
 
-- Focus: Tools and processes for analyzing transit and geospatial data, because that's our main work at MRCagney
+- Focus: Tools and processes for analyzing transit and geospatial data, because that is our main work at MRCagney
 
-- Assumption: You are proficient in Python at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they're not too different.
+- Assumption: You are proficient in Python at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they are not too different.
 
 - Third-party Python libraries that we will use a lot:
 
@@ -198,7 +198,7 @@ Theme: Web APIs
 
 1. Read about HTTP requests and the Requests library, and then install Requests.
 
-2. Play with the `Mapzen isochrone API <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_ enough to issue a successful GET request. You'll need a Mapzen API key for this, which you can `get from Mapzen here <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_, if you have a Github account, or you can use my API key, which you can get from me in person. Heed the `rate limits <https://mapzen.com/documentation/overview/#mapzen-isochrone>`_ on the isochrone API. 
+2. Play with the `Mapzen isochrone API <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_ enough to issue a successful GET request. You will need a Mapzen API key for this, which you can `get from Mapzen here <https://mapzen.com/documentation/mobility/isochrone/api-reference/>`_, if you have a Github account, or you can use my API key, which you can get from me in person. Heed the `rate limits <https://mapzen.com/documentation/overview/#mapzen-isochrone>`_ on the isochrone API. 
 
 3. Extract all the train stations from the Auckland GTFS feed in the ``data`` directory. 
 
@@ -236,7 +236,7 @@ Theme: Automated testing
 
 2. Read `the getting started section of pytest <https://docs.pytest.org/en/latest/getting-started.html>`_ and install pytest.
 
-3. Using pytest, write some automated tests for a project you've been working on. Where to put these tests?  Follow `the Python Guide advice on structuring your project <https://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/>`_.
+3. Using pytest, write some automated tests for a project you have been working on. Where to put these tests?  Follow `the Python Guide advice on structuring your project <https://python-guide-pt-br.readthedocs.io/en/latest/writing/structure/>`_.
 
 
 Homework 9
@@ -246,6 +246,17 @@ Theme: Object-oriented programming
 1. Read about object-oriented programming (OOP) in Python. Start with `this short tutorial <https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/>`_.  Then, as time permits, dig deeper by reading `this tutorial chapter <http://www.python-course.eu/python3_object_oriented_programming.php>`_ and the subsequent chapters up to and including "Metaclass Use Case".
 
 2. Rewrite your GTFS utilities from Homeworks 2 & 3 in an object-oriented way. In particular, create a Feed class to represent GTFS feeds, convert your feed functions into Feed methods, and rewrite the function ``read_gtfs()`` to output a Feed instance. 
+
+
+Homework 10
+===========
+Theme: Creating a Python package
+
+1. If you have not done so already, read the section of the Hitchhiker's Guide to Python on `writing great Python code <http://docs.python-guide.org/en/latest/#writing-great-python-code>`_.
+
+2. Following the guide's advice, create your own Python package for a project you are working on or for the GTFS toolkit we have been developing. Be sure to include a README file, a license, docstrings, automated tests, and a ``setup.py`` file. For extra credit, `use Sphinx to build your project documentation <http://docs.python-guide.org/en/latest/writing/documentation/#sphinx>`_.  Of course, you should be doing this all within a Git repository.
+
+3. Learn how to make your project installable with pip by following `these instructions <http://peterdowns.com/posts/first-time-with-pypi.html>`_.  Go through the motions and publish to the PyPi test server at least.  If really want to share your project with the world, then publish it to the PyPi live server afterwards.
 
 
 Resources
