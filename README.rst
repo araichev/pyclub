@@ -269,7 +269,7 @@ Theme: More plotting
    - `Plotly.py <https://github.com/plotly/plotly.py>`_. Interactive plots using declarative syntax. Also links to Plot.ly for sharing and collaborating on plots on the web.
 
 2. Install Plotnine and make some plots.
-3. Install Plotly.py and make the same plots.
+3. Install the Plotly.py, use `the offline version <https://plot.ly/python/offline/>`_, and make the same plots.
 
 
 Resources
