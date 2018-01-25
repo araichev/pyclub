@@ -265,8 +265,8 @@ Theme: More plotting
 
 1. Read about these two recent, nifty, open-source plotting libraries:
 
-  - `Plotnine <https://github.com/has2k1/plotnine>`_. Static plots using grammar of graphics syntax with an API similar to ggplot2 for R.
-  - `Plotly.py <https://github.com/plotly/plotly.py>`_. Interactive plots using declarative syntax. Also links to Plot.ly for sharing and collaborating on plots on the web.
+   - `Plotnine <https://github.com/has2k1/plotnine>`_. Static plots using grammar of graphics syntax with an API similar to ggplot2 for R.
+   - `Plotly.py <https://github.com/plotly/plotly.py>`_. Interactive plots using declarative syntax. Also links to Plot.ly for sharing and collaborating on plots on the web.
 
 2. Install Plotnine and make some plots.
 3. Install Plotly.py and make the same plots.
