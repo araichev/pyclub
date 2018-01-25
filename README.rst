@@ -270,6 +270,7 @@ Theme: More plotting
 
 2. Install Plotnine and make some plots.
 3. Install the Plotly.py, use `the offline version <https://plot.ly/python/offline/>`_, and make the same plots.
+4. What are some of the strengths and weaknesses of Plotnine and Plotly.py?
 
 
 Resources
