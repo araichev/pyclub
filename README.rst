@@ -66,7 +66,7 @@ Theme: Tabular data and GTFS
 
 3. Download a cleaned version of Auckland's latest GTFS feed from ``data/homework_02``. Working in a Jupyter notebook, complete the following function and test it.
 
-  .. code-block:: python
+   .. code-block:: python
 
       def read_gtfs(path):
           """
@@ -95,7 +95,7 @@ Theme: Geodata
 
 2. Recall your GTFS reader from Homework 2.3, and let us call the output of it a *GTFS feed object*. Implement the following function that converts GTFS shapes to Shapely LineString objects.
 
-  .. code-block:: python
+   .. code-block:: python
 
       def build_geometry_by_shape(feed, shape_ids=None):
           """
@@ -116,7 +116,7 @@ Theme: Geodata
 
 4. Implement the following function that converts GTFS trips to GeoJSON features (as Python dictionaries).
 
-  .. code-block:: python
+   .. code-block:: python
 
       def trip_to_geojson(feed, trip_id):
           """
@@ -137,7 +137,7 @@ Theme: Geodata
 
 5. Use your functions above to create a simple screen line counter:
 
-  .. code-block:: python
+   .. code-block:: python
 
     def compute_screen_line_counts(feed, linestring):
         """
