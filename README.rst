@@ -273,6 +273,15 @@ Theme: More plotting
 4. What are some of the strengths and weaknesses of Plotnine and Plotly.py?
 
 
+Homework 12
+============
+Theme: Dash
+
+1. Read about `Dash <https://plot.ly/dash/>`_, a Python library for building analytical web applications without JavaScript, and complete the Dash tutorial (on the same page linked to above). It helps to know the basics of HTML and CSS, which `Code Academy has a nice tutorial for<https://www.codecademy.com/ar/tracks/htmlcss>`_.
+
+2. Build a Dash app that runs on your local machine. We'll talk about deploying to a web server later.
+
+
 Resources
 ==========
 - `The Hitchhiker's Guide to Python <http://docs.python-guide.org/en/latest/>`_
