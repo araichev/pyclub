@@ -9,7 +9,7 @@ Introduction
 
 - Focus: Tools and processes for analyzing transit and geospatial data, because that's our main work at MRCagney
 
-- Assumption: You are proficient in Python at the level of, say, the `Codeacademy Python 2 tutorial <https://www.codecademy.com/learn/python>`_. We will be using Python 3, but they're not too different.
+- Assumption: You are proficient in Python at the level of, say, the `Codeacademy Python 2 tutorial (free) or Python 3 tutorial (paid) <https://www.codecademy.com/learn/python>`_. We will be using Python 3.7 in this course.
 
 - Third-party Python libraries that we will use a lot:
 
