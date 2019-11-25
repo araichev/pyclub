@@ -62,7 +62,7 @@ Theme: Tabular data and GTFS
 
 2. Read the `Wikipedia page on GTFS <https://en.wikipedia.org/wiki/GTFS>`_, and for more information see the `GTFS reference <https://developers.google.com/transit/gtfs/>`_.
 
-3. Download a cleaned version of Auckland's latest GTFS feed from ``data/homework_02``. Working in a Jupyter notebook, complete the following function and test it.
+3. Consider the Auckland GTFS feed ``data/auckland_gtfs_20190524.zip``. Working in a Jupyter notebook, complete the following function and test it.
 
    .. code-block:: python
 
@@ -216,16 +216,18 @@ Theme: Web APIs
 
 
 Homework 7
-===========
+============
 Theme: Plotting
 
-Todo: Update this to use Plotly.
+1. There are *heaps* of plotting libraries for Python, but let's focus on just two good open-source one:
 
-1. There are *heaps* of plotting libraries for Python. For a brief overview of some popular ones, read `this blog post <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_.  If you have extra time, i recommend reading `this deeper and funnier overview of Matplotlib, Pandas, Seaborn, ggplot, and Altair <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_.
+   - `Plotnine <https://github.com/has2k1/plotnine>`_. Static plots using grammar of graphics syntax with an API similar to ggplot2 for R.
+   - `Plotly.py <https://github.com/plotly/plotly.py>`_. Interactive plots using declarative syntax. Also links to Plot.ly for sharing and collaborating on plots on the web.
 
-2. I want to focus on just one library here, one that i found easy to learn, has good documention, is quite customizable, and produces interactive plots: `python-highcharts <https://github.com/kyper-data/python-highcharts>`_.  It is a Python wrapper for the JavaScript plotting library Highcharts.  Read about python-highcharts and install it.
-
-3. Get some data and make some meaningful plots using python-highcharts. For inspiration, see the `Highcharts demo <http://www.highcharts.com/demo>`_ and the corresponding `python-highcharts example code <https://github.com/kyper-data/python-highcharts/tree/master/examples/highcharts>`_.
+2. Install Plotnine and make some plots.
+3. Install the Plotly.py and make the same plots.
+4. What are some of the strengths and weaknesses of Plotnine and Plotly.py?
+5. Extra credit: `try Cufflinks <https://plot.ly/python/v3/ipython-notebooks/cufflinks/>`_, which binds Plotly directly to Pandas dataframes.
 
 
 Homework 8
@@ -260,20 +262,6 @@ Theme: Creating a Python package
 
 
 Homework 11
-============
-Theme: More plotting
-
-1. Read about these two recent, nifty, open-source plotting libraries:
-
-   - `Plotnine <https://github.com/has2k1/plotnine>`_. Static plots using grammar of graphics syntax with an API similar to ggplot2 for R.
-   - `Plotly.py <https://github.com/plotly/plotly.py>`_. Interactive plots using declarative syntax. Also links to Plot.ly for sharing and collaborating on plots on the web.
-
-2. Install Plotnine and make some plots.
-3. Install the Plotly.py, use `the offline version <https://plot.ly/python/offline/>`_, and make the same plots.
-4. What are some of the strengths and weaknesses of Plotnine and Plotly.py?
-
-
-Homework 12
 ============
 Theme: Dash
 

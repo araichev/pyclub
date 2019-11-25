@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyclub"
-version = "12.1.0"
+version = "12.2.0"
 description = "Notes on data science at MRCagney using Python"
 authors = ["Alex Raichev <araichev@mrcagney.com>"]
 license = "MIT"
