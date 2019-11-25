@@ -17,7 +17,7 @@ Introduction
   * Pandas for tabular data
   * Shapely and Fiona for geospatial data
   * Geopandas, which combines Shapely with Pandas
-  * GTFSTK for GTFS feeds
+  * GTFS Kit for GTFS feeds
 
 - Other notable third-party Python libraries for data analysis:
 
@@ -33,9 +33,7 @@ Homework 1
 ===========
 Theme: Set up and warm up
 
-1. On your computer, install Python 3.5, a virtual environment manager, and a Python package manager. You can do all this at once in a straightforward and cross-platform way by installing `Anaconda <https://www.continuum.io/downloads#windows>`_. Here is some `Reddit cheer for Anaconda <https://www.reddit.com/r/Python/comments/3t23vv/what_advantages_are_there_of_using_anaconda/>`_.  Alternatively on OS X, you can use Homebrew to install Python 3.5, virtualenv, virtualenvwrapper, and pip. Alternatively on Linux, you can use apt to install these.
-
-   Update: I hear that using the current Anaconda for Windows and Python 3.4 one can install more of the third-party libraries above than Anaconda for Windows and Python 3.5. In that case, use Python 3.4. It will do for our purposes.
+1. On your computer, install Python 3.7, a virtual environment manager, and a Python package manager. You can do all this at once in a straightforward and cross-platform way by installing `Anaconda <https://www.continuum.io/downloads#windows>`_. Here is some `Reddit cheer for Anaconda <https://www.reddit.com/r/Python/comments/3t23vv/what_advantages_are_there_of_using_anaconda/>`_.  Alternatively on OS X, you can use Homebrew to install Python 3.7, virtualenv, virtualenvwrapper, and poetry. Alternatively on Linux, you can use apt to install these.
 
 2. Create a directory and virtual environment for your PyClub work. In the virtual environment install the `Jupyter Notebook <https://jupyter.org/>`_. Open a Jupyter notebook.
 
@@ -220,6 +218,8 @@ Theme: Web APIs
 Homework 7
 ===========
 Theme: Plotting
+
+Todo: Update this to use Plotly.
 
 1. There are *heaps* of plotting libraries for Python. For a brief overview of some popular ones, read `this blog post <https://blog.modeanalytics.com/python-data-visualization-libraries/>`_.  If you have extra time, i recommend reading `this deeper and funnier overview of Matplotlib, Pandas, Seaborn, ggplot, and Altair <https://dansaber.wordpress.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/>`_.
 
