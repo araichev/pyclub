@@ -58,7 +58,7 @@ Homework 2
 ===========
 Theme: Tabular data and GTFS
 
-1. In your PyClub virtual environment install `Pandas <http://pandas.pydata.org/>`_. Complete the Pandas tutorial `here <synesthesiam.com/posts/an-introduction-to-pandas.html>`_, ignoring the first installation step, which you already did. The tutorial uses an older version of Pandas than yours, so some function APIs might have changed. If you encounter errors, check the `Pandas documentation <http://pandas.pydata.org/pandas-docs/stable/>`_ for the current correct usage.
+1. In your PyClub virtual environment install `Pandas <http://pandas.pydata.org/>`_, then do the standard 10-minute Pandas tutorial `here <https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html#min>`_. For more Pandas tutorials see `here <https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html>`_.
 
 2. Read the `Wikipedia page on GTFS <https://en.wikipedia.org/wiki/GTFS>`_, and for more information see the `GTFS reference <https://developers.google.com/transit/gtfs/>`_.
 
@@ -89,7 +89,7 @@ Homework 3
 ===========
 Theme: Geodata
 
-1. In your PyClub virtual environment install Shapely. Then read the 'Introduction' section of the `Shapely user manual  <http://toblerity.org/shapely/manual.html>`_.
+1. In your PyClub virtual environment install Shapely. Then read the 'Introduction' section of the `Shapely user manual  <https://shapely.readthedocs.io/en/latest/manual.html>`_.
 
 2. Recall your GTFS reader from Homework 2.3, and let us call the output of it a *GTFS feed object*. Implement the following function that converts GTFS shapes to Shapely LineString objects.
 
